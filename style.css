@@ -1,0 +1,586 @@
+:root {
+  --blue: #00458b;
+  --white: #ffffff;
+  --red: #f44336;
+  --black: #191919;
+  --light: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* contact section of header */
+.header-contact {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: linear-gradient(to right, #191919 50%, white 40%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* contact number, email, address section */
+.header-contact ul:nth-child(1) {
+  color: var(--white);
+}
+
+/* social media icons section */
+.header-contact ul:nth-child(2) {
+  color: var(--black);
+}
+
+/* when user hover on social media section, it shows red border */
+.header-contact ul:nth-child(2) li:hover {
+  box-shadow: 0px 0px 2px 1px var(--red);
+}
+
+.header-contact ul li {
+  display: inline-block;
+  margin: auto 15px;
+}
+
+/* navigation section */
+nav {
+  width: 100%;
+  /* max-height: auto; */
+  background-image: url("./images/image1.jpg");
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+nav div:nth-child(1) ul li {
+  display: inline-block;
+  margin: auto 15px;
+  color: var(--white);
+  transition: color 0.5s, border-bottom 5s;
+}
+
+nav div:nth-child(1) ul li:nth-child(3) span {
+  color: var(--blue);
+}
+
+nav div:nth-child(1) ul li:hover {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.bar {
+  visibility: hidden;
+}
+
+/* service now dropdown section */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.service-dropdown,
+.digital-marketing-dropdown {
+  position: absolute;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 1;
+  width: 0px;
+  height: 0px;
+  top: 120px;
+  right: 430px;
+  overflow: hidden;
+  z-index: 5;
+  border-top: 1px solid black;
+  transition: all ease-in-out 0.3s;
+}
+
+.digital-marketing-dropdown {
+  top: 120px;
+  right: 180px;
+  border-left: 1px solid black;
+}
+
+input[type="checkbox"]:checked ~ .service-dropdown {
+  width: max-content;
+  height: auto;
+  opacity: 1;
+}
+
+input[id="digital-marketing-checkbox"]:checked ~ .digital-marketing-dropdown {
+  width: max-content;
+  height: auto;
+  opacity: 1;
+}
+
+.service-dropdown ul,
+.digital-marketing-dropdown ul {
+  padding: 30px;
+}
+
+.service-dropdown ul li,
+.digital-marketing-dropdown ul li {
+  color: #262626;
+  padding: 10px;
+  font-size: 14px;
+  list-style: none;
+  text-align: left;
+}
+
+.service-dropdown li:hover {
+  position: relative;
+  left: 15px;
+}
+
+.digital-marketing-dropdown li:hover {
+  position: relative;
+  left: 15px;
+}
+
+nav div:nth-child(2) {
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+nav div:nth-child(3) {
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+/* ------------------Main section----------------------- */
+
+.digital-marketing-section {
+  margin: 7rem auto;
+  text-align: center;
+}
+
+.digital-marketing-section div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.description {
+  background-color: #f2f2f2;
+  width: 32rem;
+  height: 18rem;
+  max-width: 90%;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.odd {
+  position: relative;
+  left: 4rem;
+}
+
+.even {
+  position: relative;
+  right: 4rem;
+}
+
+.description div {
+  width: 30rem;
+  height: 15rem;
+  max-width: 90%;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding: 1.4rem;
+  margin: 1.4rem;
+}
+
+.description div h1 {
+  color: var(--black);
+  letter-spacing: 5px;
+}
+
+.description div p {
+  color: grey;
+  text-align: right;
+
+  line-height: 1.8rem;
+}
+
+.description div h1::first-letter {
+  color: var(--blue);
+}
+
+.description div ul {
+  list-style: none;
+}
+
+.description div ul li {
+  display: inline-block;
+  margin: auto 10px;
+  border: 1px solid black;
+  color: black;
+  text-align: right;
+  padding: 2px 5px;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.description div ul li:hover {
+  border: 0;
+
+  /* transform: skew(20deg); */
+  box-shadow: 0px 0px 10px 1px var(--blue);
+}
+
+.digital-marketing-section .odd-img {
+  width: 45rem;
+  height: 25rem;
+  max-width: 90%;
+  position: relative;
+  right: 4rem;
+}
+
+.digital-marketing-section .even-img {
+  width: 45rem;
+  height: 25rem;
+  max-width: 90%;
+  position: relative;
+  left: 4rem;
+}
+
+.box-container-odd,
+.box-container-even {
+  position: absolute;
+
+  bottom: 15rem;
+  width: 150px !important;
+  height: 150px !important;
+  background-color: var(--red);
+  margin: 5px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 7px solid white !important;
+  transform: skew(30deg);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.box-container-even {
+  transform: skew(-30deg);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+
+  position: absolute;
+  left: 21rem;
+  bottom: 15rem;
+  background-color: var(--blue);
+}
+
+.box-container-odd span {
+  color: white;
+  font-size: 4rem;
+  padding: auto;
+}
+
+.box-container-even span {
+  color: white;
+  font-size: 4rem;
+  padding: auto;
+}
+
+.box-container-odd:hover {
+  transform: skew(0deg);
+}
+
+.box-container-even:hover {
+  width: 6rem !important;
+  height: 6rem;
+}
+
+/* ---------------make slide left container---------------- */
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* -----call us section ----- */
+
+.call-us {
+  width: 100% !important;
+  height: 40vh;
+  background-color: #9fc5e8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0rem;
+  overflow: hidden;
+}
+
+.call-us div:nth-child(1) {
+  position: relative;
+  top: 5rem;
+  left: 6rem;
+}
+
+.call-us div:nth-child(3) {
+  position: relative;
+  top: 5rem;
+  right: 10rem;
+}
+
+.call-us div:nth-child(2) {
+  text-align: center;
+  position: relative;
+  left: 7rem;
+}
+
+.call-us div:nth-child(2) p {
+  color: grey;
+}
+
+.call-us div:nth-child(2) h1 {
+  font-size: 2rem;
+  width: 50rem;
+  color: black;
+  margin: 1rem 0rem;
+}
+
+.call-us div:nth-child(2) button {
+  font-weight: 700;
+  color: var(--white);
+  padding: 1rem 3rem;
+  background-color: var(--blue);
+  border-radius: 30px;
+}
+
+.call-us div:nth-child(2) button:hover {
+  background-color: var(--black);
+}
+
+/*------------------ footer section--------------------- */
+
+footer {
+  margin-top: 15rem;
+  position: relative;
+}
+
+footer div:nth-child(1) {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #191919;
+}
+
+.footer-part2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #262626;
+}
+
+.footer-part2 ul li,
+p {
+  display: inline-block;
+  margin: 3px 10px;
+  padding: 30px 5px;
+  color: #999999;
+}
+
+.address-container {
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #191919;
+  color: #999999;
+  border: 2px solid white;
+  position: relative;
+  top: -8rem;
+}
+
+.address-container div {
+  margin-bottom: 1rem;
+  text-align: left;
+  max-width: 18rem;
+}
+
+.address-container div img {
+  width: 10rem;
+}
+
+.address-container .address {
+  border: 2px solid grey;
+}
+
+.address div {
+  padding: 5px 10px;
+}
+
+.address div span {
+  display: inline-block;
+  padding: 2px auto;
+}
+
+.address-container .address div span:nth-child(1) {
+  font-size: 1.5rem;
+  color: var(--blue);
+  margin-right: 10px;
+}
+
+/* usefull links section */
+footer div:nth-child(1) section:nth-child(2) h1 {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+footer div:nth-child(1) section:nth-child(2) div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div:nth-child(1) section:nth-child(2) div {
+  color: #999999;
+}
+
+footer div:nth-child(1) section:nth-child(2) div ul {
+  list-style: none;
+  text-align: left;
+  margin-right: 3.5rem;
+}
+
+footer div:nth-child(1) section:nth-child(2) div ul li {
+  margin-bottom: 1.4rem;
+}
+
+/* best seo company section */
+footer div:nth-child(1) section:nth-child(3) div span {
+  display: inline-block;
+}
+
+footer div:nth-child(1) section:nth-child(3) div span:nth-child(2) {
+  color: var(--white);
+  font-size: 1.2rem;
+  width: 10rem;
+  margin-left: 20px;
+}
+
+footer div:nth-child(1) section:nth-child(3) ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+footer div:nth-child(1) section:nth-child(3) ul li {
+  margin-bottom: 1rem;
+}
+
+footer div:nth-child(1) section:nth-child(3) ul li img {
+  width: 10rem;
+}
+
+/* follow us section */
+
+.followus-section {
+  position: absolute;
+  bottom: 7rem;
+  left: 7rem;
+}
+
+.followus-section h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.followus-section li {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: auto 5px;
+  color: white;
+  background-color: orangered;
+  padding: 2px 5px;
+}
+
+/* --------responsive design--------------------- */
+
+/* for tablet devices */
+@media screen and (max-width: 1024px) and (min-width: 765px) {
+  .header-1 li:nth-child(3) {
+    display: none;
+  }
+
+  .digital-marketing-section {
+    margin-left: 9rem;
+  }
+
+  .odd {
+    position: relative;
+    left: -4rem;
+    top: 4rem;
+  }
+
+  .even-pos {
+    margin-right: 14rem;
+  }
+
+  .even {
+    position: relative;
+    left: 4rem;
+    margin-top: -4rem;
+  }
+}
